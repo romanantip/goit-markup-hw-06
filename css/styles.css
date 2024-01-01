@@ -168,11 +168,16 @@ header .container {
   }
 }
 .adress-ul {
-  display: flex;
+  /* display: flex; */
   gap: 40px;
 }
+@media screen and (min-width: 1158px) {
+  .adress-ul {
+    display: flex;
+  }
+}
 .adress-visual {
-  display: flex;
+  display: block;
   margin-right: 40px;
 }
 .adress-visual2 {
@@ -385,7 +390,6 @@ header .container {
   .description {
     flex-direction: row;
     flex-wrap: wrap;
-    width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 768px) {
@@ -509,9 +513,10 @@ header .container {
 
 .reviews-list {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 24px;
+  justify-content: space-around;
+  margin: 8px auto;
 }
 .reviews-item {
   width: 40px;
@@ -581,7 +586,6 @@ footer .reviews-link:focus {
 
 .portfolio-li {
   display: block;
-  width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
@@ -747,6 +751,12 @@ footer .web-logo {
 .social-media-form {
   margin-left: auto;
 }
+@media screen and (max-width: 768px) {
+  .social-media-form {
+    margin: auto;
+    width: 100%;
+  }
+}
 .social-parag {
   color: #fff;
 
@@ -780,8 +790,15 @@ footer .web-logo {
   line-height: 2;
   letter-spacing: 0.04em;
 }
+@media screen and (max-width: 768px) {
+  .subscribe-form-field {
+    width: 100%;
+  }
+  .subscribe-form-field > * {
+    width: inherit;
+  }
+}
 .subscribe-form-btn {
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
@@ -812,7 +829,7 @@ footer .web-logo {
 }
 
 .subscribe-form-input {
-  width: 100%;
+  width: inherit;
   height: 40px;
   border-radius: 4px;
   border: 1px solid #fff;
