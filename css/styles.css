@@ -76,8 +76,6 @@ header .container {
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 76px;
-  padding-top: 18px;
-  padding-bottom: 18px;
 }
 
 .header-studio {
@@ -164,17 +162,18 @@ header .container {
   }
 }
 .adress-ul {
-  /* display: flex; */
-  gap: 40px;
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
 }
 @media screen and (min-width: 1158px) {
   .adress-ul {
     display: flex;
+    flex-direction: row;
+    gap: 40px;
   }
 }
 .adress-visual {
-  display: block;
-  margin-right: 40px;
 }
 .adress-visual2 {
   display: flex;
@@ -268,7 +267,7 @@ header .container {
   line-height: 1.1;
   letter-spacing: 0.02em;
   max-width: 496px;
-  margin: 72px;
+  margin: 0 0 72px;
   text-transform: capitalize;
   display: block;
 }
@@ -469,16 +468,17 @@ header .container {
 .team-color {
   background-color: #ffffff;
   display: block;
-  flex-basis: calc((100% - 72px) / 4);
+
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   width: 264px;
 }
+
 @media screen and (min-width: 1158px) {
   .team-color {
-    width: calc((100%-72px) / 4);
+    width: calc((100% - 72px) / 4);
   }
 }
 
@@ -509,9 +509,9 @@ header .container {
 
 .reviews-list {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 24px;
-  justify-content: space-around;
+  justify-content: center;
   margin: 8px auto;
 }
 .reviews-item {
@@ -583,15 +583,18 @@ footer .reviews-link:focus {
 .portfolio-li {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+
 @media screen and (min-width: 768px) {
   .portfolio-li {
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     width: calc((100% - 24px) / 2);
   }
 }
 @media screen and (min-width: 1158px) {
   .portfolio-li {
-    width: calc((100%-48px) / 3);
+    width: calc((100% - 48px) / 3);
   }
 }
 
@@ -630,6 +633,7 @@ footer .reviews-link:focus {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .apps {
@@ -681,7 +685,7 @@ footer .reviews-link:focus {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 72px 24px;
-    padding: 0 108;
+    padding: 0 108px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -745,12 +749,15 @@ footer .web-logo {
   text-align: center;
 }
 .social-media-form {
-  margin-left: auto;
 }
 @media screen and (max-width: 768px) {
   .social-media-form {
     margin: auto;
     width: 100%;
+  }
+}
+@media screen and (max-width: 1158px) {
+  .social-media-form {
   }
 }
 .social-parag {
@@ -795,6 +802,7 @@ footer .web-logo {
   }
 }
 .subscribe-form-btn {
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px 24px;
@@ -875,7 +883,7 @@ footer .web-logo {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: calc(100%-32px);
+  width: calc(100% - 32px);
   max-width: 100%;
   min-height: 584px;
   border-radius: 4px;
@@ -1034,6 +1042,7 @@ footer .web-logo {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: transparent;
+  flex-shrink: 0;
 }
 
 .form-btn {
@@ -1114,7 +1123,7 @@ footer .web-logo {
   border-radius: 50%;
   cursor: pointer;
   border: none;
-  background-color: #e7e9fc;
+  background-color: rgba(231, 233, 252, 0.1);
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
