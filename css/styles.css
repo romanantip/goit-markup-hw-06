@@ -55,6 +55,12 @@ p {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .pag-vis {
+    padding: 0;
+  }
 }
 header .container {
   display: flex;
@@ -588,8 +594,8 @@ footer .reviews-link:focus {
 
 @media screen and (min-width: 768px) {
   .portfolio-li {
-    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
     width: calc((100% - 24px) / 2);
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   }
 }
 @media screen and (min-width: 1158px) {
@@ -620,7 +626,7 @@ footer .reviews-link:focus {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.porfolio-li:hover .overlay {
+.portfolio-li:hover .overlay {
   transform: translateY(0%);
 }
 .porfolio-li:hover {
@@ -633,7 +639,6 @@ footer .reviews-link:focus {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .apps {
@@ -691,9 +696,10 @@ footer .reviews-link:focus {
 @media screen and (min-width: 1158px) {
   .footer .container {
     display: flex;
-    align-items: baseline;
     flex-direction: row;
-    gap: 72px 24px;
+    align-items: baseline;
+    gap: 0;
+    padding: 0 15px;
   }
 }
 .all-footer {
@@ -749,6 +755,7 @@ footer .web-logo {
   text-align: center;
 }
 .social-media-form {
+  margin-left: auto;
 }
 @media screen and (max-width: 768px) {
   .social-media-form {
@@ -758,6 +765,7 @@ footer .web-logo {
 }
 @media screen and (max-width: 1158px) {
   .social-media-form {
+    margin-left: auto;
   }
 }
 .social-parag {
@@ -847,6 +855,12 @@ footer .web-logo {
 }
 .subscribe-form-input::placeholder {
   color: currentColor;
+}
+
+@media screen and (min-width: 1158px) {
+  .subscribe-form-input {
+    width: 264px;
+  }
 }
 
 /* modal window */
@@ -1170,4 +1184,12 @@ footer .web-logo {
 }
 .mobile-menu-list {
   margin-bottom: auto;
+}
+
+.reviews-list-mobile {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: left;
+  margin: 8px auto;
 }
