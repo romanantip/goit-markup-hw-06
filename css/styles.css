@@ -601,6 +601,12 @@ footer .reviews-link:focus {
 @media screen and (min-width: 1158px) {
   .portfolio-li {
     width: calc((100% - 48px) / 3);
+    box-shadow: none;
+  }
+  .portfolio-li:hover {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+      0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+      0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   }
 }
 
@@ -791,6 +797,12 @@ footer .web-logo {
   gap: 24px;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .subscribe-form {
+    flex-direction: row;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .subscribe-form {
     flex-direction: row;
@@ -803,7 +815,7 @@ footer .web-logo {
 }
 @media screen and (max-width: 768px) {
   .subscribe-form-field {
-    width: 100%;
+    width: 264px;
   }
   .subscribe-form-field > * {
     width: inherit;
@@ -855,6 +867,11 @@ footer .web-logo {
 }
 .subscribe-form-input::placeholder {
   color: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form-input {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1158px) {
